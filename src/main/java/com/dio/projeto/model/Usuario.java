@@ -1,7 +1,9 @@
 package com.dio.projeto.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
@@ -13,6 +15,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class Usuario {
     @Id
     private Long id;

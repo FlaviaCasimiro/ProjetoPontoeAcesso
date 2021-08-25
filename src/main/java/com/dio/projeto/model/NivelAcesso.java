@@ -1,7 +1,9 @@
 package com.dio.projeto.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Getter
@@ -10,6 +12,8 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class NivelAcesso {
     @Id
     private long id;
